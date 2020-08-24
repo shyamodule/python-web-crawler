@@ -4,6 +4,7 @@ This is a simple python web-crawler.
 This code uses: 
  - beautifulsoup4 4.9.1
  - python3 3.8.5
+ - requests 2.24.0 module for HTTP GET requests
  - pymongo 3.11.0 module for interacting with mongoDB
  - concurrent.futures module for multithreading
  
