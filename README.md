@@ -8,8 +8,8 @@ This code uses:
  - pymongo 3.11.0 module for interacting with mongoDB
  - concurrent.futures module for multithreading
  
-This webcrawler uses MongoDB database.
-The link which is crawled will save a copy of its html-source with a random name
+This webcrawler uses MongoDB database. This crawler can crawl upto five links concurrently.
+The link which is crawled will save a copy of its html-source with a random name.
 All the links are inserted in following form:
  
 post = {
