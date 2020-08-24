@@ -7,11 +7,11 @@ This code uses:
  - pymongo 3.11.0 module for interacting with mongoDB
  - concurrent.futures module for multithreading
  
- This webcrawler uses MongoDB database.
- The link which is crawled will save a copy of its html-source with a random
- all the links are inserted in following form:
+This webcrawler uses MongoDB database.
+The link which is crawled will save a copy of its html-source with a random name
+All the links are inserted in following form:
  
- post = {
+post = {
             'link': final_link,
             'source_link': curr_url,
             'is_crawled': False,
@@ -21,10 +21,10 @@ This code uses:
             'content_length': None,
             'created_at': datetime.now(),
             'file_path': None
-        }
+            }
         
         
- you can customize:
+you can customize:
   - Root URL(from where to start crawling)
   - sleep time between two cycles of crawling
   - database limit
