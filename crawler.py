@@ -67,20 +67,25 @@ def scrap_link(doc):
 
     #parsing html file to get links present in HTML source
     logger.debug('Parsing HTML and getting urls from the page')
+
     peak = html_work(response, collection)
     
     logger.debug('Database updated with links from current url: ' + curr_url)
 
+    
+    #saving or updating files
+    filepath = doc['file_path']
+    f_path_new = save_files(response, filepath)
+    
+    logger.debug('File saved in directory')
+    
+    
     #database limit
     if peak == True:
         logger.info('Maximum limit reached')
         return True
     
 
-
-    #saving or updating files
-    filepath = doc['file_path']
-    f_path_new = save_files(response, filepath)
 
 
     ctype = response.headers['Content-type']
