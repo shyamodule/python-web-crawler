@@ -118,8 +118,8 @@ def runner():
         for doc in docs:
             threads.append(executor.submit(scrap_link, doc))
 
-    for task in as_completed(threads, timeout = 30):
-        is_completed = task.result(timeout = 30)
+    for task in as_completed(threads):
+        is_completed = task.result()
         if is_completed==True:
             done = True
             break
